@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Unified background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header, .container, .centralizado {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF; /* Azul padrão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.messageDisplay {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    min-height: 50px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background: #fff; /* This should be checked as #fff might not be visible */
+    color: #007BFF; /* To make sure footer text is visible */
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Estilos para tablets e computadores */
+@media (min-width: 769px) {
+    main {
+        padding: 40px;
+    }
+    nav ul {
+        justify-content: space-around;
+    }
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.galeria img, .imagem-arredondada {
+    width: 200px; /* Largura das imagens */
+    height: 200px; /* Mantém a proporção */
+    margin: 10px; /* Espaçamento entre as imagens */
+    border-radius: 50%; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    object-fit: cover; /* Garante que a imagem cubra a área definida sem distorcer */
+    transition: transform 0.2s; /* Efeito de transição */
+}
+
+.galeria img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+
+.boomerang {
+    width: 100px;
+    height: 20px;
+    position: relative;
+    animation: boomerang 2s forwards;
+}
+
+@keyframes boomerang {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(300px) rotate(30deg); }
+    100% { transform: translateX(0) rotate(-30deg); }
+}
+
+.texto-secreto {
+    display: none; /* Oculta o texto por padrão */
+}
+
+.hover-area:hover .texto-secreto {
+    display: block; /* Mostra o texto quando o mouse está sobre a área especificada */
+}
+
+#bloco {
+    width: 50px;
+    height: 50px;
+    position: relative; /* Isso é importante para movimentá-lo */
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    line-height: 1.5; /* Aumenta o espaçamento entre linhas */
+    margin: 20px 0; /* Adiciona margem acima e abaixo */
+}
