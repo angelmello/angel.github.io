@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos.css">
+    <title>Página Exemplo</title>
+    <style>
+        /* Estilo para o parágrafo */
+        p {
+            font-size: 24px; /* Aumenta o tamanho da fonte */
+            line-height: 1.5; /* Aumenta o espaçamento entre linhas */
+            margin: 20px 0; /* Adiciona margem acima e abaixo */
+        }
+        body {
+            background-color: #FF007F; /* Cor de fundo em hexadecimal */
+            color: #333; /* Cor do texto */
+            font-family: Arial, sans-serif; /* Fonte do texto */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .centralizado {
+            text-align: center; /* Centraliza o texto horizontalmente */
+        }
+        .texto-secreto {
+            display: none; /* Oculta o texto por padrão */
+        }
+        .hover-area:hover .texto-secreto {
+            display: block; /* Mostra o texto quando o mouse está sobre a área especificada */
+        }
+        .boomerang {
+            width: 100px;
+            height: 20px;
+            position: relative;
+            animation: boomerang 2s forwards;
+        }
+        @keyframes boomerang {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(300px) rotate(30deg); }
+            100% { transform: translateX(0) rotate(-30deg); }
+        }
+        .galeria img {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="boomerang"></div>
+    <div class="centralizado">
+        <header>
+    
+            <h1>Bem-vindo à Minha página</h1>
+            
+        </header>
+        <main>
+            <p>Angel Mello</p>
+            <div class="imagem-container">
+                <div class="galeria">
+                    <img src="C:\Users\Usuário\Desktop\Angel\IMG_20240908_091342986_MP.jpg" alt="Descrição da imagem 1" class="imagem-arredondada">
+                    <img src="C:\Users\Usuário\Desktop\Angel\IMG_20240920_044444697_MP.jpg" alt="Descrição da imagem 2" class="imagem-arredondada">
+                </div>
+                <div class="hover-area" style="padding: 20px; border: 5px solid #007BFF; display: inline-block;">
+                    Passe o mouse aqui!
+                    <div class="texto-secreto">
+                        Ser autista e ter TDAH pode trazer desafios únicos, mas também pode proporcionar perspectivas e habilidades valiosas. Muitas pessoas no campo da tecnologia têm características semelhantes e são capazes de fazer contribuições incríveis.
+                        O autismo pode trazer uma forma distinta de pensar e abordar problemas, o que é um grande trunfo em áreas como programação, onde atenção aos detalhes e pensar fora da caixa são essenciais. O TDAH, por sua vez, pode tornar a sua capacidade de se concentrar em diversas tarefas e resolver problemas de forma criativa algo muito valioso, mesmo que às vezes apresente desafios na organização ou na gestão do tempo.
+                    </div>
+                </div>
+                <form action="/action_page.script.js">
+                    <label for="fname">Nome:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Sobrenome:</label><br>
+                    <input type="text" id="lname" name="lname"><br><br>
+                
+                
+                </div>
+            </main>
+            <script src="script.js"></script>
+            <textarea id="messageInput" placeholder="Escreva sua mensagem aqui..."></textarea>
+        
+            <div id="bloco"></div>
+            <div class="boomerang"></div>
+            <button id="btnInstagram">Enviar</button>
+                </form>
+            
+</body>
+</html>
